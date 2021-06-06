@@ -1,8 +1,8 @@
-import { Emoji } from '../types/types';
+import { EmojiList } from '../types/types';
 const URL = process.env.REACT_APP_API_URL as string;
 
 
-export const getEmojis = async(): Promise<Emoji[]> => { 
+export const getEmojis = async(): Promise<EmojiList[]> => { 
     const res = await fetch(URL);
     const emojis = await res.json();
 

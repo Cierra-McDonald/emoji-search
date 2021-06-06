@@ -1,4 +1,4 @@
-export interface Emoji { 
+export interface EmojiList { 
     slug: string,
     character: string,
     unicodeName: string,
