@@ -7,6 +7,9 @@ import { EmojiList, EmojiCharacter } from '../types/types';
 export const useEmojis = () => { 
     const [ emojis, setEmojis ] = useState<EmojiList[]>([]);
     const [loading, setLoading ] = useState<boolean>(true);
+    const [search, setSearch] = useState<string>('')
+
+
 
     useEffect(() => { 
         getEmojis()
@@ -14,6 +17,14 @@ export const useEmojis = () => {
             .finally(() => setLoading(false));
     }, [])
 
-    return { emojis, loading }
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.target.value);
+    }
+
+    const filterEmojis = emojis.filter(emoji => { 
+        return emoji.unicodeName.toLowerCase().includes(search.toLowerCase())
+    })
+
+    return { emojis, loading, search, handleChange, filterEmojis }
 
 }
