@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import { EmojiCharacter, EmojiList } from '../types/types';
-import EmojiItem from './EmojiItem';
-import { getEmojiByName } from '../services/emoji-api';
+import React from 'react';
 import FoundEmojis from './FoundEmojis'
 import { useEmojis } from '../hooks/emojiHooks';
 
@@ -16,6 +13,7 @@ const SearchEmoji: React.FC = () => {
                     value={search}
                     placeholder={"Search Emoji"}
                     onChange={handleChange}
+                    style={{width: '35vh', height: '5vh', borderRadius: '.5em'}}
                     />
                     <br/>
                     <br/>

@@ -4,8 +4,9 @@ type SearchProps = {
     filtered: any,
 }
 
+
+
 const FoundEmojis: React.FC<SearchProps> = ({ filtered }) => { 
-    console.log(filtered)
     
     return ( 
         <div>
