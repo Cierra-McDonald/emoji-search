@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEmojis } from '../hooks/emojiHooks';
 import EmojiItem from './EmojiItem';
-import styles from './EmojiListPage.module.css';
 
 const EmojiListPage: React.FC = () => { 
 
     const { loading, emojis } = useEmojis();
    
 
-    const emojiItems = emojis.map(emoji => (<li key={emoji.slug} 
-    className={styles.list}>
+    const emojiItems = emojis.map(emoji => (<li key={emoji.slug}>
         <EmojiItem {...emoji}/>
     </li>))
 
@@ -17,7 +15,7 @@ const EmojiListPage: React.FC = () => {
     if(loading) return <h2>Loading...</h2>
     return (
     <div>
-        <ul className={styles.ul}>
+        <ul style={{ listStyle: 'none'}}>
             {emojiItems}
         </ul>
     </div> 

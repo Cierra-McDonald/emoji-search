@@ -1,0 +1,30 @@
+.filtered { 
+    list-style: none;
+    margin: 10px;
+    overflow-y: scroll;
+    border: ' solid black';
+    height: 800px; 
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    padding-left: 10px;
+}
+.list { 
+    border: whitesmoke solid 2px;
+    margin: 10px;
+    background-color: rgba(245, 245, 245, 0.3);
+    border-radius: .3em;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    height: 5vh;
+    font-family: monospace;
+    font-size: 20px;
+    align-content: center;
+}
+
+.list:hover { 
+    cursor: pointer;
+    background-color: teal;
+}

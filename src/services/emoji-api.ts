@@ -1,4 +1,4 @@
-import { EmojiCharacter, EmojiList } from '../types/types';
+import { EmojiList } from '../types/types';
 const URL = process.env.REACT_APP_API_URL as string;
 
 

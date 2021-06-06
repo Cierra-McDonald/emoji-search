@@ -5,7 +5,8 @@ import { useEmojis } from '../hooks/emojiHooks';
 
 const SearchEmoji: React.FC = () => { 
     
-    const { search, handleChange, filterEmojis } = useEmojis();
+    const { search, handleChange, filterEmojis, loading } = useEmojis();
+
     return ( 
         <div>
                 <input
@@ -15,10 +16,10 @@ const SearchEmoji: React.FC = () => {
                     onChange={handleChange}
                     style={{width: '35vh', height: '5vh', borderRadius: '.5em'}}
                     />
-                    <br/>
-                    <br/>
             <FoundEmojis
-             filtered={filterEmojis} />
+             filtered={filterEmojis}
+             loading={loading} 
+             />
         </div>
     )
 

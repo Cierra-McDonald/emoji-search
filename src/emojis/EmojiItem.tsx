@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './EmojiItem.module.css';
 
 interface Props { 
     unicodeName: string;
@@ -9,7 +10,7 @@ interface Props {
 const EmojiItem: React.FC<Props> = ({ unicodeName, character }) => { 
     return ( 
         <div>
-            <figure>
+            <figure className={styles.emojicap}>
                 <div>{character}</div> 
                 <figcaption>{unicodeName}</figcaption>
             </figure>
